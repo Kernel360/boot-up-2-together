@@ -5,7 +5,7 @@
 
 - "특정 여행지" 에서 "특정 일정"에 나와 동행할 수 있는 "적절한 누군가" 를 찾고싶다.
 - 지역별 여행지 / 일정을 정리해서 동행자를 찾을 수 있는 어플리케이션
-- 
+
 ## Contributors
 
 - 팀장 : 박성준
@@ -43,8 +43,6 @@
 
 ![image](https://github.com/user-attachments/assets/a0a3effd-b6ee-4801-b8f7-ece84a48f40e) | ![image](https://github.com/user-attachments/assets/551cca60-5fcc-4378-8dac-8c1742950e46)
 ---|---|
-
-### 
 
 ## 시스템 아키텍처
 
