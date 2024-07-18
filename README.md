@@ -2,9 +2,10 @@
 ![image](https://github.com/user-attachments/assets/32b69b7f-c8f1-4a49-9bd6-73cb6723698d)
 
 # **Together**
-
+## 프로젝트 소개
 - "특정 여행지" 에서 "특정 일정"에 나와 동행할 수 있는 "적절한 누군가" 를 찾고싶다.
 - 지역별 여행지 / 일정을 정리해서 동행자를 찾을 수 있는 어플리케이션
+- 전세계 유저를 대상으로 하며, MVP 를 먼저 출시하여 실제 수요를 확인하고자 한다.
 
 ## Contributors
 
@@ -12,34 +13,41 @@
 - 1~2일차 팀원 : 임건우, 박소은, 김택준
 - 3~4일차 팀원 : 이재윤, 양상원
 
+## 협업 도구
+- Google Sheets : 요구사항 명세서 / 기능 명세서
+- Figma : UI 설계
+    - FigJam : UI 초안 작성
+- ERD 작성 : ERD Cloud
+- API 명세 작성 : Notion 
 
+## 산출물
+### 요구사항 명세서
+[Google Sheets - 요구사항 명세서](https://docs.google.com/spreadsheets/d/1JWTPQIfjt_Tpc1RSI6gckm-ssMxSHy9X5MA9IFc1_II/edit?usp=sharing)
 
-## 요구사항 명세서
-
-![image](https://github.com/user-attachments/assets/bd944f45-a5ec-44fb-a421-66343dbaf9f9)
-
-
-# ERD
+### ERD
+[ERD Cloud](https://www.erdcloud.com/d/Ey749xad75dJxgE6K)
 
 ![image](https://github.com/user-attachments/assets/0f4957a4-3cb3-4adb-881a-cd83b794f21d)
 
-## API 명세서
+### API 명세서
 
-!https://www.notion.so/API-d4a4d7d4958f4ca7befab0cbb738ba57?pvs=4
+[Notion - API 명세](https://www.notion.so/API-d4a4d7d4958f4ca7befab0cbb738ba57?pvs=4)
 
-## UI / UX
+### 화면 구성
 
-### 프로필
+[Figma](https://www.figma.com/design/MgS77UV2lBz9W6SaGh3lNx/Mobile-App-Design?node-id=0-1&t=D2CwxtwH6Ynia0A9-1)
+
+#### 프로필
 ![image](https://github.com/user-attachments/assets/732dd22d-4872-41ec-8436-f9a8aaab67ff) | ![image](https://github.com/user-attachments/assets/732dd22d-4872-41ec-8436-f9a8aaab67ff) | ![image](https://github.com/user-attachments/assets/efec482c-ef55-4a10-81a3-81d7fb961331)
 ---|---|---|
 
 
-### 여행 일정
+#### 여행 일정
 
 ![image](https://github.com/user-attachments/assets/abf93eca-5428-40fe-ac83-45be4f118059) | ![image](https://github.com/user-attachments/assets/ac27e3df-ce8b-4d26-a14b-d98f7e89495f) | ![image](https://github.com/user-attachments/assets/b1f43bf3-0587-41d0-b7f0-82d7f630d291) | ![image](https://github.com/user-attachments/assets/f43d4da4-787f-4a32-9702-8ebe2ba93cec)
 ---|---|---|---|
 
-## 채팅
+#### 채팅
 
 ![image](https://github.com/user-attachments/assets/a0a3effd-b6ee-4801-b8f7-ece84a48f40e) | ![image](https://github.com/user-attachments/assets/551cca60-5fcc-4378-8dac-8c1742950e46)
 ---|---|
@@ -76,8 +84,7 @@
         - ECS (Backend API Server) - Fargate
             - ECR for container registry
         - RDS for MySQL DB Instance
-        - Redis → Pub / Sub  for ElasticCache
-            - 서비스의 사용량이 증가하며 scale out 이 필요할 때 추가
+            - 안정적인 DB 운영
         - S3
             - image 업로드 및 저장을 위함
         - 모니터링에 대한 기술 선택이 필요하지만 현재 해당 사항까지 고려하지 못하였다.
