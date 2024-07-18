@@ -1,5 +1,7 @@
 
 ![image](https://github.com/user-attachments/assets/32b69b7f-c8f1-4a49-9bd6-73cb6723698d)
+## Kernel 360 Bootup
+- Bootup 과정을 통해 협업에 대한 이해를 하고, 프로젝트의 기획, 설계, 문서화에 대해 이해한다.
 
 # **Together**
 ## 프로젝트 소개
