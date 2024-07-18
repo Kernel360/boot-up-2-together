@@ -55,21 +55,22 @@
 
 - 아직 수요가 미지수인 어플리케이션 출시를 가정하였습니다.
     
-    ## 백엔드
+    ### 서버
     
-    ### 언어 및 프레임 워크
+    #### 언어 및 프레임 워크
     
     - Java 17, Spring Boot 3.3.x
     
-    ### DB
+    #### DB
     
     - MySQL 8.x
     
-    ### 프론트 엔드
+    ### 클라이언트
     
     - React Native
         - 푸시 알림, 대상 사용자를 고려할 때 모바일 앱으로 배포가 필요하였다.
         - Native 앱의 경우 iOS / Android 개별 개발이 필요한데, 현재 빠르게 서비스를 배포한다는 목적에 부합하지 않았다.
+        - 일반적으로 웹 개발자의 경우 js 에 익숙하며 함께 개발에 빠르게 참여할 수 있다는 점을 이유로 선정하였다.
     
     ### 인프라
     
@@ -90,3 +91,6 @@
     - Google / Kakao / Apple OAuth
     - Google 지도 API
         - 국내보다 글로벌 서비스를 타깃으로 잡고 있어 Google API 활용이 가장 적합함.
+
+## 발표자료
+[Google slide](https://docs.google.com/presentation/d/1TdRTxUEhZu2otAOfha70xBANcTtQy-iWhpby3w7MhZw/edit?usp=sharing)
