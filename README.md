@@ -1,32 +1,91 @@
-# Together
-여행지에서 동행을 구하고 싶을 때, 새로운 사람을 만나고 싶을 때 **Together**!
 
-## 기획 의도
-- "특정 여행지" 에서 "특정 일정"에 나와 동행할 수 있는 "적절한 누군가" 를 찾고싶다.
-- 지역별 여행지 / 일정을 정리해서 동행자를 찾을 수 있는 어플리케이션
+![image](https://github.com/user-attachments/assets/32b69b7f-c8f1-4a49-9bd6-73cb6723698d)
 
-## 요구사항 명세서 / 기능 명세서
-[Google Sheet - 요구사항 명세서](https://docs.google.com/spreadsheets/d/1JWTPQIfjt_Tpc1RSI6gckm-ssMxSHy9X5MA9IFc1_II/edit?gid=1070321515#gid=1070321515) 
+## **Together**
 
-## ERD
-[ERD Cloud](https://www.erdcloud.com/d/Ey749xad75dJxgE6K)
+여행을 통해서 새로운 사람을 만나고, 필요한 자원을 공유하는 서비스
 
-## UI 초안
-[FigJam](https://www.figma.com/board/0EHVPpTtKET5LeNlzMYwF3/Together?node-id=0-1&t=syKinN0ja1cVFWEZ-0)
+## Contributors
+
+- 팀장 : 박성준
+- 1~2일차 팀원 : 임건우, 박소은, 김택준
+- 3~4일차 팀원 : 이재윤, 양상원
+
+
+
+## 요구사항 명세서
+
+![image](https://github.com/user-attachments/assets/bd944f45-a5ec-44fb-a421-66343dbaf9f9)
+
+
+# ERD
+
+![image](https://github.com/user-attachments/assets/0f4957a4-3cb3-4adb-881a-cd83b794f21d)
+
+## API 명세서
+
+!https://www.notion.so/API-d4a4d7d4958f4ca7befab0cbb738ba57?pvs=4
+
+## UI / UX
+
+### 프로필
+![image](https://github.com/user-attachments/assets/732dd22d-4872-41ec-8436-f9a8aaab67ff) | ![image](https://github.com/user-attachments/assets/732dd22d-4872-41ec-8436-f9a8aaab67ff) | ![image](https://github.com/user-attachments/assets/efec482c-ef55-4a10-81a3-81d7fb961331)
+---|---|---|
+
+
+### 여행 일정
+
+![image](https://github.com/user-attachments/assets/abf93eca-5428-40fe-ac83-45be4f118059) | ![image](https://github.com/user-attachments/assets/ac27e3df-ce8b-4d26-a14b-d98f7e89495f) | ![image](https://github.com/user-attachments/assets/b1f43bf3-0587-41d0-b7f0-82d7f630d291) | ![image](https://github.com/user-attachments/assets/f43d4da4-787f-4a32-9702-8ebe2ba93cec)
+---|---|---|---|
+
+## 채팅
+
+![image](https://github.com/user-attachments/assets/a0a3effd-b6ee-4801-b8f7-ece84a48f40e) | ![image](https://github.com/user-attachments/assets/551cca60-5fcc-4378-8dac-8c1742950e46)
+---|---|
+
+### 
+
+## 시스템 아키텍처
+
+![image](https://github.com/user-attachments/assets/aef656ac-4771-419a-bccd-527c27cd221e)
+
 
 ## 기술 스택
-(아직 정확하게 결정된 상태 아닙니다.)
-### Backend
-- Java 17 + Spring Boot 3.x
-  - Spring Data JPA + Spring Security
-- MySQL 8
 
-### Frontend
-- Mobile 위주로 구성할 계획을 세우고 있습니다.
-- App -> Flutter / React native / Next.js
-
-### Infra
-- AWS cloud 이용
-  - API Server : EC2
-  - DB : RDS
-  - Image Bucket : S3
+- 아직 수요가 미지수인 어플리케이션 출시를 가정하였습니다.
+    
+    ## 백엔드
+    
+    ### 언어 및 프레임 워크
+    
+    - Java 17, Spring Boot 3.3.x
+    
+    ### DB
+    
+    - MySQL 8.x
+    
+    ### 프론트 엔드
+    
+    - React Native
+        - 푸시 알림, 대상 사용자를 고려할 때 모바일 앱으로 배포가 필요하였다.
+        - Native 앱의 경우 iOS / Android 개별 개발이 필요한데, 현재 빠르게 서비스를 배포한다는 목적에 부합하지 않았다.
+    
+    ### 인프라
+    
+    - AWS Cloud
+        - ECS (Backend API Server) - Fargate
+            - ECR for container registry
+        - RDS for MySQL DB Instance
+        - Redis → Pub / Sub  for ElasticCache
+            - 서비스의 사용량이 증가하며 scale out 이 필요할 때 추가
+        - S3
+            - image 업로드 및 저장을 위함
+        - 모니터링에 대한 기술 선택이 필요하지만 현재 해당 사항까지 고려하지 못하였다.
+    - Firebase Cloud Messaging
+        - 모바일 푸시 알림
+    
+    ### 사용하는 외부 API
+    
+    - Google / Kakao / Apple OAuth
+    - Google 지도 API
+        - 국내보다 글로벌 서비스를 타깃으로 잡고 있어 Google API 활용이 가장 적합함.
