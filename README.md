@@ -1,7 +1,7 @@
 
 ![image](https://github.com/user-attachments/assets/32b69b7f-c8f1-4a49-9bd6-73cb6723698d)
 
-## **Together**
+# **Together**
 
 - "특정 여행지" 에서 "특정 일정"에 나와 동행할 수 있는 "적절한 누군가" 를 찾고싶다.
 - 지역별 여행지 / 일정을 정리해서 동행자를 찾을 수 있는 어플리케이션
